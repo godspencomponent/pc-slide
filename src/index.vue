@@ -107,7 +107,6 @@
         height: '100%',
         width: '100%',
         display: 'block',
-        background: 'rgba(239, 239, 239, 0.84)',
       }
     },
     computed: {

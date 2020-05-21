@@ -1,6 +1,5 @@
 <template>
   <div class="component-editor">
-    你可以在这里自己开发属性编辑器，扩展更高级的功能
   </div>
 </template>
 

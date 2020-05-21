@@ -27,7 +27,11 @@
       >
         <div class="sizeTip">组件显示区域({{componentSize.width}}*{{componentSize.height}})</div>
         <div class="node" :style="style">
-          <com v-bind="componentProps" ref="component"></com>
+          <com v-bind="componentProps" ref="component">
+            <div v-for="(_,i) in child" :key="i" :slot="'slot'+i" class="node" :style="slotStyle">
+              <h1 style="margin: 0;padding: 20px 0; text-align: center;">{{_}}</h1>
+            </div>
+          </com>
         </div>
       </vue-drag-resize>
       <div class="block editor" :style="editerStyle">
@@ -126,6 +130,8 @@
     data () {
       return {
         style: pkg.style,
+        slotStyle: com.slots.style,
+        child: Array.from({length: 4}, (_, i) => i),
         // 开发过程的分辨率选项
         sizes: {
           'Mobile S': {

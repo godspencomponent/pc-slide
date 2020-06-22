@@ -9,6 +9,7 @@ var install = function () {
   Vue.component('attr-function', AttrCom)
   Vue.component('attr-richtext', AttrCom)
   Vue.component('attr-event', AttrCom)
+  Vue.component('rich-text', AttrCom)
 }
 
 export default {
